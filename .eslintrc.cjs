@@ -9,6 +9,7 @@ module.exports = {
     "@vue/eslint-config-prettier",
   ],
   env: {
+    // 解决’defineProps’ is not defined
     "vue/setup-compiler-macros": true,
   },
 };
