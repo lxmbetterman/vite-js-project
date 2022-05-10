@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-let a = 'aaa '
+let a = 'aaa'
 console.log(a)
 
 const app = createApp(App)
