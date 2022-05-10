@@ -2,9 +2,12 @@
 import { useMouse } from '@/use/mouse.js'
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from '@/components/HelloWorld.vue'
+
+const { x, y } = useMouse()
 </script>
 
 <template>
+  <span>Mouse position is at: {{ x }}, {{ y }}</span>
   <header>
     <img
       alt="Vue logo"

@@ -60,3 +60,6 @@ npm run lint
     ]
   }
 ```
+
+## TypeScript intellisense is disabled on template, you can config `"jsx": "preserve"` in tsconfig or jsconfig to enable it, or config `vueCompilerOptions.experimentalDisableTemplateSupport` to disable this prompt.volar
+～设置中搜索tsconfig ->Check JS Experimental Decorators 去掉勾选☑️🐳
