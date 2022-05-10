@@ -4,11 +4,15 @@ import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from '@/components/HelloWorld.vue'
 
 const { x, y } = useMouse()
+
+let onResize = () => {
+  console.log(111)
+}
 </script>
 
 <template>
   <span>Mouse position is at: {{ x }}, {{ y }}</span>
-  <header>
+  <header v-resize:[500]="onResize">
     <img
       alt="Vue logo"
       class="logo"
