@@ -1,9 +1,11 @@
 <script setup>
+import TestComVue from './TestCom.vue'
 import TheWelcome from '@/components/TheWelcome.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <TestComVue :title="'123?????'" propF="success">Slot---------</TestComVue>
+    <TheWelcome></TheWelcome>
   </main>
 </template>

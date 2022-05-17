@@ -5,13 +5,13 @@
         "allowSyntheticDefaultImports": true,
         "baseUrl": "./",
         "paths": {
-          "@/*": ["src/*"]
+          "@/*": ["src/*"] // @/的 ctrl 跳转
         }
     },
     "exclude": [
         "node_modules"
     ],
     "vueCompilerOptions": {
-      "experimentalDisableTemplateSupport": true
+      "experimentalDisableTemplateSupport": true // 解决template蓝色波浪提示
     }
   }

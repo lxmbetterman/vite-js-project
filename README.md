@@ -68,3 +68,13 @@ jsconfig.json添加
     "experimentalDisableTemplateSupport": true
   }
 ```
+
+## ref 在模板中的解包
+```js
+  // todo 当一个 ref 作为一个响应式对象的 property 被访问或更改时，它会自动解包，因此会表现得和一般的 property 一样：
+  const count = ref(0)
+  const state = reactive({ count })
+  console.log(state.count, 'vv') // 0
+  state.count = 1
+  console.log(count.value, 'vvv') // 1
+```
