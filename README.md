@@ -78,3 +78,5 @@ jsconfig.json添加
   state.count = 1
   console.log(count.value, 'vvv') // 1
 ```
+
+## Mac环境下的vscode默认块注释的快捷键为shift + option + A
