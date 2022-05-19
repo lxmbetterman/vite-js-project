@@ -80,3 +80,41 @@ jsconfig.json添加
 ```
 
 ## Mac环境下的vscode默认块注释的快捷键为shift + option + A
+## 光标退回上一次的文件位置：option + commond + ↔️ 
+
+## 如何创建一个预置防抖的事件处理器
+```js
+
+/* 写法一：这种方法对于被重用的组件来说是有问题的，因为这个预置防抖的函数是 有状态的：
+它在运行时维护着一个内部状态。如果多个组件实例都共享这同一个预置防抖的函数，那么它们之间将会互相影响。  */
+import { debounce } from 'lodash-es'
+
+export default {
+  methods: {
+    // 使用 Lodash 的防抖函数
+    click: debounce(function () {
+      // ... 对点击的响应 ...
+    }, 500)
+  }
+}
+
+/* ！推荐写法二 */
+export default {
+  created() {
+    // 每个实例都有了自己的预置防抖的处理函数
+    this.debouncedClick = _.debounce(this.click, 500)
+  },
+  unmounted() {
+    // 最好是在组件卸载时
+    // 清除掉防抖计时器
+    this.debouncedClick.cancel()
+  },
+  methods: {
+    click() {
+      // ... 对点击的响应 ...
+    }
+  }
+}
+```
+
+### 关于async/await的常见用法总汇

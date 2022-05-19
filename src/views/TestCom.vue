@@ -3,7 +3,7 @@
     <p>{{ props.title }}</p>
     <slot></slot>
 
-    <p @click="submitForm">哈哈</p>
+    <p @click="updateLocation">哈哈{{ location }}</p>
     <input
       type="text"
       :value="modelValue"
@@ -15,6 +15,14 @@
 </template>
 <script setup>
 // s
+import { inject } from 'vue'
+import { useEventListener } from '@/use/event'
+let { location, updateLocation } = inject('location')
+const handleResize = () => {
+  console.log('resize function')
+}
+useEventListener(window, 'resize', handleResize)
+
 const props = defineProps({
   title: {
     type: String,

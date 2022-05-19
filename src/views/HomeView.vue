@@ -11,7 +11,7 @@
 import TestComVue from './TestCom.vue'
 import TheWelcome from '@/components/TheWelcome.vue'
 
-import { provide, ref } from 'vue'
+import { provide, ref, readonly } from 'vue'
 
 const location = ref('North Pole')
 
@@ -20,7 +20,8 @@ function updateLocation() {
 }
 
 provide('location', {
-  location,
+  location: readonly(location),
+  // location,
   updateLocation,
 })
 </script>

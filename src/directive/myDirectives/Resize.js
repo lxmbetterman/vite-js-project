@@ -1,4 +1,3 @@
-// import $utils from '@/utils/utils'
 import { debounce } from 'lodash-es'
 export const Resize = {
   setup() {
@@ -18,6 +17,7 @@ export const Resize = {
       leading: binding.modifiers.delay ? false : true,
     }
     let delayTime = Number(binding.arg)
+    // 每个实例都有了自己的预置防抖的处理函数
     const debouncedResize = debounce(handler, delayTime, options) // 生成一个debounce函数
 
     window.addEventListener('resize', debouncedResize)
