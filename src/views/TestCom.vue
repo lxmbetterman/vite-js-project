@@ -3,7 +3,11 @@
     <p>{{ props.title }}</p>
     <slot></slot>
 
-    <p @click="updateLocation">哈哈{{ location }}</p>
+    <p @click="updateLocation">
+      哈哈{{ location }}; globalCount:{{ globalCount }}; localCount{{
+        localCount
+      }}
+    </p>
     <input
       type="text"
       :value="modelValue"
@@ -17,6 +21,10 @@
 // s
 import { inject } from 'vue'
 import { useEventListener } from '@/use/event'
+import { useCount } from '@/use/count.js'
+
+const { globalCount, localCount } = useCount()
+
 let { location, updateLocation } = inject('location')
 const handleResize = () => {
   console.log('resize function')

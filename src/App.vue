@@ -1,26 +1,7 @@
-<script setup>
-import { ref } from 'vue'
-
-import { useMouse } from '@/use/mouse.js'
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from '@/components/HelloWorld.vue'
-
-const { x: xx, y: yy } = useMouse()
-const windowWidth = ref(0)
-const windowHeight = ref(0)
-
-let onResize = () => {
-  windowWidth.value = document.clientWidth || document.body.clientWidth
-  windowHeight.value = document.clientHeight || document.body.clientHeight
-  // console.log(windowWidth, windowHeight)
-}
-
-onResize()
-</script>
-
 <template>
   <p>Mouse position is at: {{ xx }}, {{ yy }}</p>
   <p>浏览器宽高：{{ windowWidth }}-{{ windowHeight }}</p>
+
   <header v-resize:[500]="onResize">
     <img
       alt="Vue logo"
@@ -41,6 +22,27 @@ onResize()
   </header>
   <RouterView />
 </template>
+<script setup>
+import { ref } from 'vue'
+
+import { useMouse } from '@/use/mouse.js'
+// import { useCount } from '@/use/count.js'
+import { RouterLink, RouterView } from 'vue-router'
+import HelloWorld from '@/components/HelloWorld.vue'
+
+const { x: xx, y: yy } = useMouse()
+
+const windowWidth = ref(0)
+const windowHeight = ref(0)
+
+let onResize = () => {
+  windowWidth.value = document.clientWidth || document.body.clientWidth
+  windowHeight.value = document.clientHeight || document.body.clientHeight
+  // console.log(windowWidth, windowHeight)
+}
+
+onResize()
+</script>
 
 <style>
 @import '@/assets/base.css';
