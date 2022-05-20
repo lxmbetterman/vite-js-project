@@ -13,6 +13,12 @@ module.exports = {
     'vue/setup-compiler-macros': true,
   },
   rules: {
-    // semi: [2, "never"],
+    'vue/multi-word-component-names': [
+      // vue组件取名规则
+      0,
+      {
+        ignores: [],
+      },
+    ],
   },
 }
