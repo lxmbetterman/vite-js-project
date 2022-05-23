@@ -25,7 +25,7 @@ const layout2 = defineAsyncComponent(() => import('./layout2/index.vue'))
 currentLayout.value = layoutDefault
 
 watch(
-  () => storeLayout.layoutType,
+  () => storeLayout.layoutType, // 监听布局变化
   (newLayoutType) => {
     console.log(newLayoutType, 'newLayoutType')
     switch (newLayoutType) {

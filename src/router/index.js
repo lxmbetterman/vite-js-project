@@ -32,6 +32,7 @@ const router = createRouter({
       path: '/projectOne',
       name: 'projectOne',
       component: Layout,
+      meta: { type: 'project' },
       redirect: '/projectOne/dashboard',
       children: [
         {
