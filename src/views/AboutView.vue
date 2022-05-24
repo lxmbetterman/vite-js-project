@@ -1,6 +1,7 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
+    <el-button type="primary" size="small">？？</el-button>
     <TestCom></TestCom>
   </div>
 </template>
