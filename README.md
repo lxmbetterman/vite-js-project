@@ -118,3 +118,9 @@ export default {
 ```
 
 ### 关于async/await的常见用法总汇
+
+### JS中的位置和宽度：clientWidth、offsetWidth、scrollWidth等区别
+- clientWidth的实际宽度： clientWidth = width+左右padding
+- offsetWidth的实际宽度：offsetWidth = width + 左右padding + 左右boder
+- scrollWidth和scrollHeight 、 scrollTop和scrollLeft
+https://blog.csdn.net/qq_42089654/article/details/80515916
