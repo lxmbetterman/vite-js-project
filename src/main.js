@@ -20,3 +20,9 @@ getIndexStyle().then(() => {
 })
 
 app.mount('#app')
+
+// ackground-color: var(--el-button-hover-bg-color);
+// border-color: var(--el-button-hover-border-color);
+// --el-color-primary:#409eff;
+// ('--el-color-primary-light-7:#c6e2ff;')
+// var(--el-color-primary-light-3)

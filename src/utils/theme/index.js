@@ -10,6 +10,7 @@ export function writeNewStyle() {
   let colors = generateColors('#7A40F2') // 选择的主颜色
 
   let cssText = originalStyle
+  console.log(originalStyle, '--originalStyle--')
   let colorsCssText = ''
   Object.keys(colors).forEach((key) => {
     cssText = cssText.replace(
@@ -30,12 +31,19 @@ export function getIndexStyle() {
   return new Promise((resolve) => {
     if (!originalStyle) {
       axios
-        .all([axios.get('/theme/index.css'), axios.get('/theme/extra.css')])
+        .all([
+          axios.get('/theme/index.css'),
+          axios.get('/theme/extra.css'),
+          axios.get('/theme/dark-index.css'),
+        ])
         .then(
-          axios.spread((file, extraFile) => {
+          axios.spread((file, extraFile, darkFile) => {
             const fileData = file.data
             const extraFileData = extraFile.data.replace(/[\r\n]/g, '')
-            originalStyle = getStyleTemplate(fileData + extraFileData)
+            const darkFileData = darkFile.data.replace(/[\r\n]/g, '')
+            originalStyle = getStyleTemplate(
+              fileData + extraFileData + darkFileData
+            )
             resolve()
           })
         )

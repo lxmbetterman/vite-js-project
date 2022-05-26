@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>This is an about page{{ isDark }}</h1>
     <el-row class="mb-4">
       <el-button>Default</el-button>
       <el-button type="primary">Primary</el-button>
@@ -39,5 +39,6 @@ export default {
 </script>
 <script setup>
 import TestCom from './TestCom.vue'
+import { isDark } from '@/composables'
 </script>
 <style lang="scss" scoped></style>
