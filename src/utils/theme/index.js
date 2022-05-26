@@ -10,7 +10,6 @@ export function writeNewStyle() {
   let colors = generateColors('#7A40F2') // 选择的主颜色
 
   let cssText = originalStyle
-  console.log(originalStyle, '--originalStyle--')
   let colorsCssText = ''
   Object.keys(colors).forEach((key) => {
     cssText = cssText.replace(
