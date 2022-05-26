@@ -1,11 +1,30 @@
 html.dark {
+    /* 
+        shade-1: "#3a8ee6"
+        shade-2: "#337ecc"
+        shade-3: "#2d6fb3"
+        shade-4: "#265f99"
+        shade-5: "#204f80"
+        shade-6: "#1a3f66"
+        shade-7: "#132f4d"
+        shade-8: "#0d2033"
+        shade-9: "#061019" 
+
+        这里把原的
+        --el-color-primary-light-3: #2d6fb3;
+        --el-color-primary-light-5: #204f80;
+        --el-color-primary-light-7: #132f4d;
+        --el-color-primary-light-8: #0d2033;
+        --el-color-primary-light-9: #061019;
+        替换成了上面的值
+    */
     color-scheme: dark;
     --el-color-primary: #409eff;
-    --el-color-primary-light-3: #3375b9;
-    --el-color-primary-light-5: #2a598a;
-    --el-color-primary-light-7: #213d5b;
-    --el-color-primary-light-8: #1d3043;
-    --el-color-primary-light-9: #18222c;
+    --el-color-primary-light-3: #2d6fb3;
+    --el-color-primary-light-5: #204f80;
+    --el-color-primary-light-7: #132f4d;
+    --el-color-primary-light-8: #0d2033;
+    --el-color-primary-light-9: #061019;
     --el-color-primary-dark-2: #66b1ff;
     --el-color-success: #67c23a;
     --el-color-success-light-3: #4e8e2f;

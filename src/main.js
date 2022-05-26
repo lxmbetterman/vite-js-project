@@ -6,6 +6,8 @@ import router from './router'
 import myDirectives from '@/directive'
 import { createPinia } from 'pinia'
 
+import color from 'css-color-function'
+
 const app = createApp(App)
 app.use(ElementPlus)
 app.use(createPinia())
@@ -26,3 +28,4 @@ app.mount('#app')
 // --el-color-primary:#409eff;
 // ('--el-color-primary-light-7:#c6e2ff;')
 // var(--el-color-primary-light-3)
+console.log(color.convert('color(#409eff tint(50%))'))
