@@ -74,7 +74,7 @@ import SupportIcon from './icons/IconSupport.vue'
 
   <WelcomeItem>
     <template #icon>
-      <CommunityIcon />
+      <CommunityIcon style="width: 20px" />
     </template>
     <template #heading>Community</template>
 
