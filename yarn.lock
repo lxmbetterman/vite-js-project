@@ -58,6 +58,11 @@
   resolved "https://registry.npmmirror.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
+"@micro-zoe/micro-app@^0.8.5":
+  version "0.8.5"
+  resolved "https://registry.npmmirror.com/@micro-zoe/micro-app/-/micro-app-0.8.5.tgz#44883941fbc46cd68d5ece261dc353c9525efb4e"
+  integrity sha512-PFnoAxepT/njBEP1fkavvxVoyWsEexcq/BGq7rcW+3kavOHwrm3yNpDlsLEkVT3FVGA11tCWe0TmbJMsFYTTSg==
+
 "@popperjs/core@npm:@sxzz/popperjs-es@^2.11.7":
   version "2.11.7"
   resolved "https://registry.npmmirror.com/@sxzz/popperjs-es/-/popperjs-es-2.11.7.tgz#a7f69e3665d3da9b115f9e71671dae1b97e13671"
