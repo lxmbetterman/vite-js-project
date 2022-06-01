@@ -1,5 +1,4 @@
 <template>
-  <button @click="toggleDark()">toggleDark{{ isDark }}</button>
   <div class="demo-color-block">
     <span class="demonstration">With default value</span>
     <el-color-picker v-model="color1" />
@@ -8,11 +7,14 @@
     <span class="demonstration">Default</span>
     <el-date-picker v-model="value1" type="date" placeholder="Pick a day" />
   </div>
+
   <!--使用方法 v-resize:200.delay="handleResize"  -->
   <div class="TestCom" ref="container" v-resize:1="handleResize">
     <div v-for="item in menuList" :key="item" class="item">{{ item.name }}</div>
   </div>
   {{ popMenuList }}
+
+  <div @click="getFolderChilren">文件夹</div>
 </template>
 <script>
 import { ref } from 'vue'
@@ -23,9 +25,7 @@ export default {
 }
 </script>
 <script setup>
-import { toggleDark, isDark } from '@/composables'
-
-// const isDark = useDark()
+// import { toggleDark, isDark } from '@/composables'
 
 const container = ref('container')
 
@@ -66,6 +66,12 @@ const handleResize = () => {
     //popMenuList  menuList
     menuList.value.push(popMenuList.value.pop())
   }
+}
+
+let getFolderChilren = () => {
+  let fso = new ActiveXObject('Scripting.FileSystemObject')
+  let fldr = fso.GetFolder('/Users/laixueming/BN/vue/LRAP')
+  console.log(fldr)
 }
 </script>
 <style lang="scss" scoped>

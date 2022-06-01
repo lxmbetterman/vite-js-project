@@ -5,6 +5,9 @@
 import { RouterView } from 'vue-router'
 // eslint-disable-next-line no-unused-vars
 import { toggleDark, isDark } from '@/composables'
+// if (isDark) {
+//   toggleDark()
+// }
 </script>
 
 <style>
