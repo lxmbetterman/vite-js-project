@@ -23,7 +23,7 @@ export function writeNewStyle() {
       .border-${key}{border-color: ${colors[key]}!important;}
     `
   })
-  document.getElementById('themeStyle').innerText = cssText + colorsCssText
+  document.getElementById('themeStyleVite').innerText = cssText + colorsCssText
 }
 
 export function getIndexStyle() {

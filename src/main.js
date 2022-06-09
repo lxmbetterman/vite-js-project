@@ -1,3 +1,8 @@
+// index.js
+import microApp from '@micro-zoe/micro-app'
+
+microApp.start()
+
 import { createApp } from 'vue'
 import ElementPlus from 'element-plus'
 // import 'element-plus/dist/index.css'
